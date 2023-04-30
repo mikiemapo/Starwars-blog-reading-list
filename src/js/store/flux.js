@@ -6,9 +6,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			vehichles : []
 		},
 		actions: {
-			// getCharacters : ()=> {
-			// 	axios fetch(swApi + "/people").then(
-						// ).then(data => setStore({ characters: data.results }));
+			// getVehichles : ()=> {
+			// 	axios fetch(swApi + "/vehichles").then(
+						// ).then(data => setStore({ vehichles: data.results }));
 			// },
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {

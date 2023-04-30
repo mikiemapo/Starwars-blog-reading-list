@@ -7,7 +7,7 @@ import { validateSchema } from "webpack";
 export const Vehichle = () => {
     const {store,actions} = useContext(Context);
     console.log(store.characters)
-    //1 create axios func to get swapi info in flux.js and save in store.character put func in app context.js 2.the list of characters will be available at store.characters 3.mapthroughstore.characters arr to repeat card comp 
+    //1 create axios func to get swapi info in flux.js and save in store.vehichles put func in app context.js 2.the list of vehichles will be available at store.characters 3.mapthroughstore.vehichles arr to repeat card comp 
     return(
     <div className="text-center mt-5">
         {/* // {arr.lenght>0 ? arr.map((Vitem, Vindex)=>{
