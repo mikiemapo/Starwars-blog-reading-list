@@ -1,20 +1,15 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			characters : [],
+			planets : [],
+			vehichles : []
 		},
 		actions: {
+			// getCharacters : ()=> {
+			// 	axios fetch(swApi + "/people").then(
+						// ).then(data => setStore({ characters: data.results }));
+			// },
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
