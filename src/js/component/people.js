@@ -3,7 +3,8 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const People = (props) => {
-  const { store, actions } = Context(Context);
+  const { store, actions } = React.useContext(Context);
+  console.log(Context, "HERE")
   let characterProps =
     props.type == "character" ? (
       <div className="text-center mt-5">
