@@ -2,14 +2,14 @@ import React from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-export const People = (props) => {
+export const Vehicle = (props) => {
   const { store, actions } = useContext(Context);
-  let characterProps =
-    props.type == "character" ? (
+  let vehicleProps =
+    props.type == "vehicle" ? (
       <div className="text-center mt-5">
         <div className="card" style={{ width: "18rem" }}>
           <img
-            src={`https://starwars-visualguide.com/assets/img/characters/${
+            src={`https://starwars-visualguide.com/assets/img/vehicles/${
               props.id + 1
             }.jpg`}
             className="card-img-top"
@@ -28,7 +28,7 @@ export const People = (props) => {
     );
   return (
     <div className="card" style={{ witdh: "18rem" }}>
-      {props.type == "character" ? characterProps : ""}
+      {props.type == "vehicle" ? vehicleProps : ""}
       <div className="d-flex" style={{ justifyContent: "space-between" }}>
         <Link to={"/about/" + props.type + "/" + props.id}>
           <span className="btn btn-primary"></span>
