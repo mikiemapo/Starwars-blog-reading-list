@@ -1,41 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
 
-export const People = (props) => {
-  const { store, actions } = React.useContext(Context);
-  console.log(Context, "HERE")
-  let characterProps =
-    props.type == "character" ? (
-      <div className="text-center mt-5">
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={`https://starwars-visualguide.com/assets/img/characters/${
-              props.id + 1
-            }.jpg`}
-            className="card-img-top"
-            alt="..."
-          />
-          <div className="card-body">
-            <h5 className="card-title">{props.item.name}</h5>
-            <h6> Gender : {props.item.gender}</h6>
-            <h6> Gender : {props.item.gender}</h6>
-            <h6> Gender : {props.item.gender}</h6>
-          </div>
-        </div>
-      </div>
-    ) : (
-      " "
-    );
+export const People = () => {
+  const { store, actions } = useContext(Context);
+  console.log(store.People);
+
   return (
-    <div className="card" style={{ witdh: "18rem" }}>
-      {props.type == "character" ? characterProps : ""}
-      <div className="d-flex" style={{ justifyContent: "space-between" }}>
-        <Link to={"/about/" + props.type + "/" + props.id}>
-          <span className="btn btn-primary"></span>
-        </Link>
-        // this going to be the fav button
-      </div>
+    <div className="text-center mt-5">
+      {store.Peoples.length > 0 ? (
+        store.Peoples.map((People, index) => {
+          return (
+            <div key={index} className="card" style={{ width: "18rem" }}>
+              <img
+                src={`https://starwars-visualguide.com/assets/img/people/.jpg`}
+                className="card-img-top"
+                alt="..."
+              />
+              <div className="card-body">
+                <h5 className="card-title">{People.name}</h5>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" className="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </div>
+          );
+        })
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };
