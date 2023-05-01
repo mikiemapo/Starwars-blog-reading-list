@@ -17,9 +17,9 @@ export const Vehicle = (props) => {
           />
           <div className="card-body">
             <h5 className="card-title">{props.item.name}</h5>
+            {/* <h6> Gender : {props.item.gender}</h6>
             <h6> Gender : {props.item.gender}</h6>
-            <h6> Gender : {props.item.gender}</h6>
-            <h6> Gender : {props.item.gender}</h6>
+            <h6> Gender : {props.item.gender}</h6> */}
           </div>
         </div>
       </div>
