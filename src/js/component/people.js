@@ -5,13 +5,13 @@ export const People = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="text-center mt-5">
+    <div className="card-container d-flex text-center mt-5">
       {store.characters.length > 0 ? (
         store.characters.map((person, index) => {
           return (
-            <div key={index} className="card" style={{ width: "18rem" }}>
+            <div  key={index} className="card" style={{ width: "18rem" }}>
               <img
-                src={`https://starwars-visualguide.com/assets/img/people/${person.id}.jpg`}
+                src={`https://starwars-visualguide.com/assets/img/people/.jpg`}
                 className="card-img-top"
                 alt="..."
               />

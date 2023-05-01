@@ -5,13 +5,13 @@ export const Planet = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="text-center mt-5">
+    <div className="d-flex card-container text-center mt-5">
       {store.planets.length > 0 ? (
         store.planets.map((planet, index) => {
           return (
             <div key={index} className="card" style={{ width: "18rem" }}>
               <img
-                src={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`}
+                src={`https://starwars-visualguide.com/assets/img/planets/.jpg`}
                 className="card-img-top"
                 alt="..."
               />

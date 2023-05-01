@@ -7,7 +7,7 @@ export const Vehicle = () => {
   console.log(store.vehicles);
 
   return (
-    <div className="text-center mt-5">
+    <div className="d-flex  card-container text-center mt-5">
       {store.vehicles.length > 0 ? (
         store.vehicles.map((vehicles, index) => {
           return (

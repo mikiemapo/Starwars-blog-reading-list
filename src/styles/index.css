@@ -1,3 +1,12 @@
-/* 
-    General Styles
-*/
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    margin: 0 -10px;
+  }
+  
+  .card {
+    flex: 0 0 300px; /* set the width of each card */
+    margin: 0 10px;
+  }
+  
