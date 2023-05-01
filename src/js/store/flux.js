@@ -10,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			getVehicles: () => {
-				axios.get('http https://swapi.dev/api/vehicles/:id/')
+				axios.get('https://swapi.dev/api/vehicles/')
 					.then(response => {
 						const data = response.data.results;
 						setStore({ vehicles: data });
@@ -24,7 +24,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			getCharacters: () => {
-				axios.get('http https://swapi.dev/api/people/:id/')
+				axios.get('https://swapi.dev/api/people/')
 					.then(response => {
 						const data = response.data.results;
 						setStore({ characters: data });
@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 	
 			getPlanets: () => {
-				axios.get('http https://swapi.dev/api/planets/:id/')
+				axios.get('https://swapi.dev/api/planets/')
 					.then(response => {
 						const data = response.data.results;
 						setStore({ planets: data });
