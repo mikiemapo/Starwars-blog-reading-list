@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Planet = (props) => {
-  const { store, actions } = useContext(Context);
+  const { store, actions } = Context(Context);
   let planetProps =
     props.type == "planet" ? (
       <div className="text-center mt-5">
