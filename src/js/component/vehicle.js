@@ -23,9 +23,11 @@ export const Vehicle = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="#" className="btn btn-primary">
+                <a href="#" className="float-start btn btn-primary">
                   Go somewhere
                 </a>
+                <i class="fa fa-heart text-danger"></i>
+
               </div>
             </div>
           );

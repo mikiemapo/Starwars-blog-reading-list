@@ -20,9 +20,10 @@ export const Planet = () => {
                 <p className="card-text">
                   Population: {planet.population}
                 </p>
-                <a href="#" className="btn btn-primary">
+                <a href="#" className="float-start btn btn-primary">
                   Go somewhere
                 </a>
+                <i class="fa fa-heart text-danger"></i>
               </div>
             </div>
           );
