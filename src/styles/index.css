@@ -8,5 +8,17 @@
   .card {
     flex: 0 0 300px; /* set the width of each card */
     margin: 0 10px;
+    background-color:black
+  }
+
+  .card-text {
+    color: white;
+  }
+
+  .card-title{
+    color: white;
   }
   
+  body {
+ background-color:black
+  }
