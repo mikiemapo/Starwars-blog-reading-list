@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import Aboutpeople from "./views/aboutpeople";
+import Aboutvehicles from "./views/aboutvehicle";
+import Aboutplanets from "./views/aboutplanet";
 
 import {Home} from "./views/home";
 
@@ -21,6 +23,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutpeople/:id" element={<Aboutpeople />} />
+          <Route path="/aboutvehicle/:id" element={<Aboutvehicles />} />
+          <Route path="/aboutplanet/:id" element={<Aboutplanets />} />
       
           <Route path="*" element={<h1>Not found!</h1>} />
         </Routes>

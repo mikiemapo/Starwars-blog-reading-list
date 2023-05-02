@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export const Planet = () => {
   const { store, actions } = useContext(Context);
@@ -20,9 +21,11 @@ export const Planet = () => {
                 <p className="card-text">
                   Population: {planet.population}
                 </p>
-                <a href="#" className="float-start btn btn-primary">
+                <Link to={"/aboutplanet/"+index}>
+                <span href="#" className="float-start btn btn-primary">
                   Go somewhere
-                </a>
+                </span>
+                </Link>
                 <i class="fa fa-heart text-danger"></i>
               </div>
             </div>

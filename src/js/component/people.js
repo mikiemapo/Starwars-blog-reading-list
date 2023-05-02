@@ -8,7 +8,7 @@ export const People = () => {
     <div className="card-container d-flex text-center mt-5">
       {store.characters.length > 0 ? (
         store.characters.map((person, index) => {
-          console.log(person)
+          
           return (
             <div  key={index} className="card" style={{ width: "18rem" }}>
               <img

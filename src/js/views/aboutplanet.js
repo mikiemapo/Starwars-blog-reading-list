@@ -3,16 +3,17 @@ import { useParams } from "react-router";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
 
-const Aboutpeople = () => {
+const Aboutplanets = () => {
   const params = useParams();
   const { store, actions } = useContext(Context);
-  let person = store.characters[parseInt(params.id)];
+  let planet = store.planets[parseInt(params.id)];
+  console.log(planet);
   return (
     <div className="card-text">
       <div>
         <img></img>
         <div>
-          <h2>{person.name}</h2>
+          <h2>{planet.name}</h2>
           <p>
             The approach will not be easy. You are required to maneuver straight
             down this trench and skim the surface to this point. The target area
@@ -29,12 +30,12 @@ const Aboutpeople = () => {
         </div>
       </div>
       <div>
-        <p>height :{person.height}</p>
-        <p>eye color :{person.eye_color}</p>
-        <p>hair color :{person.hair_color}</p>
-        <p>birth year :{person.birth_year}</p>
+        <p>Population : {planet.population}</p>
+        <p>Diameter : {planet.diameter}</p>
+        <p>Climate : {planet.climate}</p>
+        <p>Gravity : {planet.gravity}</p>
       </div>
     </div>
   );
 };
-export default Aboutpeople;
+export default Aboutplanets;

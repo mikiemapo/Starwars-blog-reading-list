@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export const Vehicle = () => {
   const { store, actions } = useContext(Context);
@@ -20,12 +21,19 @@ export const Vehicle = () => {
               <div className="card-body">
                 <h5 className="card-title">{vehicles.name}</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                 Model : {vehicles.model}
                 </p>
-                <a href="#" className="float-start btn btn-primary">
+                <p className="card-text">
+                 Length : {vehicles.length}
+                </p>
+                <p className="card-text">
+                 Crew : {vehicles.crew}
+                </p>
+                <Link to={"/aboutvehicle/"+index}>
+                <span href="#" className="float-start btn btn-primary">
                   Go somewhere
-                </a>
+                </span>
+                </Link>
                 <i class="fa fa-heart text-danger"></i>
 
               </div>
