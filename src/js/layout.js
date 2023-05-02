@@ -1,11 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
+import Aboutpeople from "./views/aboutpeople";
 
 import {Home} from "./views/home";
-import { Planet } from "./component/planet";
-import { People } from "./component/people";
-import { Vehicle } from "./component/vehicle";
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -21,9 +20,8 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/people" element={<People />} />
-          <Route path="/planet" element={<Planet />} />
-          <Route path="/vehicle" element={<Vehicle />} />
+          <Route path="/aboutpeople/:id" element={<Aboutpeople />} />
+      
           <Route path="*" element={<h1>Not found!</h1>} />
         </Routes>
         <Footer />
