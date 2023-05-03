@@ -6,11 +6,11 @@ import "../../styles/home.css";
 
 export const Home = () => (
 	<div className="container-fluid text-center mt-5">
-		<h1>People</h1>
+		<h1 className="card-text fs-1">People</h1>
 		<People />
-		<h1>Planet</h1>
+		<h1 className="card-text fs-1">Planet</h1>
 		<Planet />
-		<h1>Vehicle</h1>
+		<h1 className="card-text fs-1">Vehicle</h1>
 		<Vehicle />
 	</div>
 );
