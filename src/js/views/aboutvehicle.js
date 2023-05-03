@@ -33,7 +33,7 @@ const Aboutvehicles = () => {
         <p>Model : {vehicle.model}</p>
         <p>Length : {vehicle.length}</p>
         <p>Passengers : {vehicle.passengers}</p>
-        <p>manufacturer : {vehicle.manufacturer}</p>
+        <p>Manufacturer : {vehicle.manufacturer}</p>
       </div>
     </div>
   );
