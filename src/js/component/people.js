@@ -5,7 +5,7 @@ export const People = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="card-container d-flex text-center mt-5">
+    <div className="scroll card-container d-flex text-center mt-5">
       {store.characters.length > 0 ? (
         store.characters.map((person, index) => {
           

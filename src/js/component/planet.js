@@ -6,7 +6,7 @@ export const Planet = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="d-flex card-container text-center mt-5">
+    <div className="scroll d-flex card-container text-center mt-5">
       {store.planets.length > 0 ? (
         store.planets.map((planet, index) => {
           return (
