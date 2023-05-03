@@ -4,6 +4,16 @@ import { Link } from "react-router-dom";
 export const People = () => {
   const { store, actions } = useContext(Context);
 
+//  {store.characters.map((person,index)=>{
+
+//   return(
+//     <div key={index}>
+//       {person.name}
+//     </div>
+//   )
+//  })}
+
+
   return (
     <div className="scroll card-container d-flex text-center mt-5">
       {store.characters.length > 0 ? (
