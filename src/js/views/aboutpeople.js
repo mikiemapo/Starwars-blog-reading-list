@@ -8,7 +8,7 @@ const Aboutpeople = () => {
   const { store, actions } = useContext(Context);
   let person = store.characters[parseInt(params.id)];
   return (
-    <div className="card-text">
+    <div className=" p-5 card-text">
       <div>
         <img></img>
         <div>

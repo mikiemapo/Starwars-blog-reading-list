@@ -9,7 +9,7 @@ const Aboutplanets = () => {
   let planet = store.planets[parseInt(params.id)];
   console.log(planet);
   return (
-    <div className="card-text">
+    <div className=" p-5 card-text">
       <div>
         <img></img>
         <div>

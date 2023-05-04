@@ -3,18 +3,19 @@ import { useParams } from "react-router";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
 
+
 const Aboutvehicles = () => {
   const params = useParams();
   const { store, actions } = useContext(Context);
   let vehicle = store.vehicles[parseInt(params.id)];
   console.log(vehicle);
   return (
-    <div className="card-text">
-      <div>
-        <img></img>
+    <div className=" p-5 card-text">
+      <div className="d-flex">
+      <img/>
         <div>
           <h2>{vehicle.name}</h2>
-          <p>
+          <p className="float-end">
             The approach will not be easy. You are required to maneuver straight
             down this trench and skim the surface to this point. The target area
             is only two meters wide. It’s a small thermal exhaust port, right
@@ -29,7 +30,7 @@ const Aboutvehicles = () => {
           </p>
         </div>
       </div>
-      <div>
+      <div className="float-start">
         <p>Model : {vehicle.model}</p>
         <p>Length : {vehicle.length}</p>
         <p>Passengers : {vehicle.passengers}</p>
