@@ -43,7 +43,7 @@ export const People = () => {
                 </span>
                 </Link>
                 
-                <i class="fa fa-heart text-danger"></i>
+                <i onClick={setDropdown} class="fa fa-heart text-danger"></i>
                 
               </div>
             </div>
