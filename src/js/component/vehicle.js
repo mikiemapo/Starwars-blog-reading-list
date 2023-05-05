@@ -34,7 +34,18 @@ export const Vehicle = () => {
                   Go somewhere
                 </span>
                 </Link>
-                <i class="fa fa-heart text-danger"></i>
+
+                <button
+                type="button" class="fa fa-heart text-danger btn btn-outline-danger" 
+                  onClick={() => {
+                    store.favorites.includes(vehicles.name)
+                      ? (console.log("I've been clicked"),
+                        alert("user already favorited this character"))
+                      : actions.addFavorites(vehicles.name);
+                  }}
+                ></button>
+
+               
 
               </div>
             </div>

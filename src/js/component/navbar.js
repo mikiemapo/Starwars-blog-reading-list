@@ -9,9 +9,9 @@ export const Navbar = () => {
   return (
     <nav className="homenav navbar navbar-light bg-opacity-75 mb-3">
       <Link to="/">
-        <span className="navbar-brand mb-0 h1 p-5">
+        <button type="button" class="btn btn-outline-light">
           <img src={logo} alt="Logo" height="50" />
-        </span>
+        </button>
       </Link>
       <div className="ml-auto p-2">
         <div class="dropdown">
@@ -21,7 +21,7 @@ export const Navbar = () => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Dropdown
+            Favorite
           </button>
           <ul className="px-3 dropdown-menu">
             {store.favorites.length > 0 ? (
@@ -29,7 +29,8 @@ export const Navbar = () => {
                 return (
                   <div className="d-flex">
                     {" "}
-                    <button 
+                    <button
+                    type="button" class="btn btn-outline-danger" 
                       onClick={() => {
                         actions.deleteFavorites(index);
                       }}

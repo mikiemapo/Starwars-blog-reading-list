@@ -37,15 +37,15 @@ export const People = () => {
                   </span>
                 </Link>
 
-                <i
+                <button
+                type="button" class="fa fa-heart text-danger btn btn-outline-danger" 
                   onClick={() => {
                     store.favorites.includes(person.name)
                       ? (console.log("I've been clicked"),
                         alert("user already favorited this character"))
                       : actions.addFavorites(person.name);
                   }}
-                  class="fa fa-heart text-danger"
-                ></i>
+                ></button>
               </div>
             </div>
           );
