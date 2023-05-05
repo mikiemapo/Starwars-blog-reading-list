@@ -10,7 +10,7 @@ export const Home = () => {
 	return (
 	<div className="container-fluid text-center mt-5">
 		<h1 className="card-text fs-1">People</h1>
-		<People dropddown={dropdown} setDropdown={setDropdown}/>
+		<People/>
 		<h1 className="card-text fs-1">Planet</h1>
 		<Planet />
 		<h1 className="card-text fs-1">Vehicle</h1>

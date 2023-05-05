@@ -5,8 +5,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			vehicles: [],
 			characters: [],
-			planets: []
-			
+			planets: [],
+			favorites: []
 		},
 		actions: {
 			getVehicles: () => {
@@ -23,6 +23,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 
+			addFavorites: (name) => {
+				const store = getStore();
+				setStore({ favorites: [...store.favorites, name] });
+				console.log(store.favorites);
+			},
+
+			deleteFavorites: (index) => {
+				console.log(index,'DELETE')
+				const store = getStore();
+				let filtered = store.favorites.filter((item, i) => i != index);
+				setStore({ favorites: filtered });
+			},
+
 			getCharacters: () => {
 				axios.get('https://swapi.dev/api/people/')
 					.then(response => {
@@ -36,7 +49,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log('Request complete!');
 					});
 			},
-	
+
 			getPlanets: () => {
 				axios.get('https://swapi.dev/api/planets/')
 					.then(response => {
