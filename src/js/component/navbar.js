@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "/workspaces/react-hello-webapp/src/img/StarWars.png";
+import logo from "../../img/StarWars.png";
+
 import { Context } from "../store/appContext";
 import { useContext } from "react";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
+  console.log("store:", store); // Log the store object to check its content
+  console.log("actions:", actions); // Log the actions object to check its content
+  console.log("logo:", logo); // Log the imported logo to check if it is correctly imported
+
   return (
     <nav className="homenav navbar navbar-light bg-opacity-75 mb-3">
       <Link to="/">
@@ -26,12 +31,15 @@ export const Navbar = () => {
           <ul className="px-3 dropdown-menu">
             {store.favorites.length > 0 ? (
               store.favorites.map((elem, index) => {
+                console.log("favorite:", elem); // Log each favorite to check its value
                 return (
                   <div className="d-flex">
                     {" "}
                     <button
-                    type="button" class="btn btn-outline-danger" 
+                      type="button"
+                      class="btn btn-outline-danger"
                       onClick={() => {
+                        console.log("Deleting favorite at index", index); // Log the deletion of a favorite
                         actions.deleteFavorites(index);
                       }}
                     >
